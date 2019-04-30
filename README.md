@@ -1,3 +1,3 @@
 # codescape.de
 
-Website code.
+Jekyll code for the website served under www.codescape.de
