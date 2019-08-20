@@ -15,42 +15,78 @@
           background-color: #fff;
           font-family: 'Raleway';
           font-size: 16px; }
+        
         h1 {
           font-family: 'Cute Font', cursive;
           text-align: center;
           color: tomato;
-          font-size: 12em;
-          margin: 1.5em 0 0.25em; }
+          font-size: 6em;
+          margin: 0.25em 0 0.25em; }
+        
         a {
           color: tomato;
           text-decoration: none;
           border-bottom: 1px dotted #ccc; }
+        
         a:hover {
           color: #1EAEDB; }
-        .container {
+        
+        .outer {
+          display: table;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%; }
+
+        .middle {
+          display: table-cell;
+          vertical-align: middle; }
+
+        .inner {
+          margin-left: auto;
+          margin-right: auto;
           max-width: 800px;
-          margin: auto;
           text-align: center; }
-        .container ul {
+                
+        ul {
           list-style: none;
           margin: 0;
           padding: 0; }
-        .container ul li {
+        
+        ul li {
           display: inline; }
-        .container ul li::after {
+        
+        ul li::after {
           content: "\00A0\00A0\00B7\00A0\00A0"; }
-        .container ul li:last-child::after {
+        
+        ul li:last-child::after {
           content: none; }
+        
         .footer {
           margin: 4em 0 2em;
           font-size: 0.8em;
           color: #333; }
+        
+        /* Larger than phone */
+        @media (min-width: 550px) {
+            h1 { font-size: 9em; }
+        }
+
+        /* Larger than tablet */
+        @media (min-width: 750px) {
+            h1 { font-size: 12em; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        {{content}}
-        <p class="footer">© <script>document.write(new Date().getFullYear());</script> <a href="http://www.stefanglase.de">Stefan Glase</a></p>
-    </div>
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+                {{content}}
+                <p class="footer">© <script>document.write(new Date().getFullYear());</script> <a href="http://www.stefanglase.de">Stefan Glase</a></p>
+            </div>
+        </div>
+    </div>  
 <body>
 </html>
