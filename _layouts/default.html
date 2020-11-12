@@ -6,87 +6,46 @@
     <title>{{site.title}}</title>
 
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Stefan Glase">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="//fonts.googleapis.com/css?family=Cute+Font|Raleway" rel="stylesheet" type="text/css">
-    <style>
-        body {
-          background-color: #fff;
-          font-family: 'Raleway';
-          font-size: 16px; }
-        
-        h1 {
-          font-family: 'Cute Font', cursive;
-          text-align: center;
-          color: tomato;
-          font-size: 6em;
-          margin: 0.25em 0 0.25em; }
-        
-        a {
-          color: tomato;
-          text-decoration: none;
-          border-bottom: 1px dotted #ccc; }
-        
-        a:hover {
-          color: #1EAEDB; }
-        
-        .outer {
-          display: table;
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%; }
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
 
-        .middle {
-          display: table-cell;
-          vertical-align: middle; }
-
-        .inner {
-          margin-left: auto;
-          margin-right: auto;
-          max-width: 800px;
-          text-align: center; }
-                
-        ul {
-          list-style: none;
-          margin: 0;
-          padding: 0; }
-        
-        ul li {
-          display: inline; }
-        
-        ul li::after {
-          content: "\00A0\00A0\00B7\00A0\00A0"; }
-        
-        ul li:last-child::after {
-          content: none; }
-        
-        .footer {
-          margin: 4em 0 2em;
-          font-size: 0.8em;
-          color: #333; }
-        
-        /* Larger than phone */
-        @media (min-width: 550px) {
-            h1 { font-size: 9em; }
-        }
-
-        /* Larger than tablet */
-        @media (min-width: 750px) {
-            h1 { font-size: 12em; }
-        }
-    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/js/site.js"></script>
 </head>
 <body>
-    <div class="outer">
-        <div class="middle">
-            <div class="inner">
-                {{content}}
-                <p class="footer">© <script>document.write(new Date().getFullYear());</script> <a href="http://www.stefanglase.de">Stefan Glase</a></p>
-            </div>
+
+<div class="container">
+    <section class="header">
+        <img class="logo" src="/images/codescape-logo.png" alt="codescape Logo">
+        <h1 class="title">{{site.title}}</h1>
+    </section>
+
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+        <a href="#top" class="hamburger">&#9776;</a>
+        <div class="container">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a class="navbar-link" href="/#about">About Us</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/#products">Our Products</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/#contact">Contact Us</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/#imprint">Imprint</a></li>
+            </ul>
         </div>
-    </div>  
-<body>
+    </nav>
+
+    {{content}}
+
+    <div class="docs-section footer">
+        <p>&copy; 2010 - <script>document.write(new Date().getFullYear())</script> <a href="/imprint">codescape</a></p>
+    </div>
+
+</div>
+
+</body>
 </html>
