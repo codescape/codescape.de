@@ -48,6 +48,9 @@ h6 {
     padding: 4rem 0 0;
     margin-bottom: 0; }
 
+.docs-section.footer {
+    border-top: 0; }
+
 .docs-section table {
     width: 100%; }
 
