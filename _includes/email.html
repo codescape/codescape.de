@@ -1,0 +1,7 @@
+{% assign email = include.address %}
+{% assign reversed = email | split: "" | reverse | join: "" %}
+
+<a href="#" class="email-protected"
+   data-email="{{ reversed }}">
+  <span class="email-text">{{ reversed }}</span>
+</a>
