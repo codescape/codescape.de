@@ -24,7 +24,7 @@ $(document).ready(function() {
   });
 
   $("#contact-submit").on("click", function(event) {
-    var mail = 'stefan.glase@googlemail.com';
+    var mail = 'stefan@codescape.de';
     var subject = 'codescape - Website Contact Form';
     var body = $("#contact-message").val()
              + '\n\n---\n\n'
